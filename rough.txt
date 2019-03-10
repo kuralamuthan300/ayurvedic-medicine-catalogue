@@ -1,0 +1,63 @@
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  
+</script>
+
+
+1.Which medicine is preferred for **** allergy
+2.what is the medicine for **** fever
+3.what is  first aid for **** stomach pain
+4.which medicine can I take for **** fever
+5.Is there any medicine for **** ulcer
+6.Can you suggestion some medicine for ***** stomach pain
+8.May I know the medicine for **** ulcer
+10.what is the preferable medicine for **** fever
+
+ 
+
+
+
+{
+  // Chats contains only meta info about each conversation
+  // stored under the chats's unique ID
+  "chats": {
+    "one": {
+      "title": "Historical Tech Pioneers",
+      "lastMessage": "ghopper: Relay malfunction found. Cause: moth.",
+      "timestamp": 1459361875666
+    },
+    "two": { ... },
+    "three": { ... }
+  },
+
+  // Conversation members are easily accessible
+  // and stored by chat conversation ID
+  "members": {
+    // we'll talk about indices like this below
+    "one": {
+      "ghopper": true,
+      "alovelace": true,
+      "eclarke": true
+    },
+    "two": { ... },
+    "three": { ... }
+  },
+
+  // Messages are separate from data we may want to iterate quickly
+  // but still easily paginated and queried, and organized by chat
+  // conversation ID
+  "messages": {
+    "one": {
+      "m1": {
+        "name": "eclarke",
+        "message": "The relay seems to be malfunctioning.",
+        "timestamp": 1459361875337
+      },
+      "m2": { ... },
+      "m3": { ... }
+    },
+    "two": { ... },
+    "three": { ... }
+  }
+}
