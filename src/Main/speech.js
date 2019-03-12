@@ -15,6 +15,7 @@ class Speech extends React.Component{
 
     }
     componentDidMount(){
+      //nothing
       const mediRef = firebase.database().ref('Medicine');
       mediRef.on('value',(snapshot)=>{
         let medicines = snapshot.val();
