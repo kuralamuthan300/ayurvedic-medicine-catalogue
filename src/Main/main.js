@@ -53,6 +53,7 @@ class Main extends React.Component{
         return(
 			
 			<div className="ui container" >
+			<center><h1 className="scale-up-center"><b>Ayush</b></h1></center>
             <div class="ui container three item menu" style = {{margin : ' 20px' , marginLeft : '20px' , marginRight :'20px',borderRadius:'30px'}}>
   			<a class="item" href="#" onClick={this.onclickpopular}>Search </a>
   			<a class="ui inverted item  " href="#" onClick={this.onclickhome}>Home</a>
