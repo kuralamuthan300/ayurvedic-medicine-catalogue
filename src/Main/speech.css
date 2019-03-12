@@ -1,4 +1,7 @@
+.con { overflow:hidden; }
+.lft { float:left; }
 
+.rgt { float:right; }
 
 ul{
     border: 4px solid #545FE5;

@@ -2,7 +2,6 @@ import React from 'react';
 import SpeechRecognizer from 'simple-speech-recognition';
 import firebase from './Firebase/firebase';
 import './speech.css';
-import Faker from 'faker';
 
 
 
@@ -87,10 +86,10 @@ class Speech extends React.Component{
           return(<div > {this.state.medicine.map( (medicine)=>{
 
             avail = medicine.therapeuticuses.search(chumma);
-            console.log(avail);
+            
 
             avail2 = medicine.therapeuticuses.search(chumma2);
-            console.log(avail);
+            
 
             
 
@@ -130,8 +129,66 @@ class Speech extends React.Component{
     render(){
         
 
-        return(<div className="ui ">
-            <br />
+        return(<div className="ui con">
+            <div class="ui inverted segment lft">
+            <div class="ui inverted relaxed divided list">
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Snickerdoodle</div>
+            An excellent companion
+            </div>
+            </div>
+
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Poodle</div>
+            A poodle, its pretty basic
+            </div>
+            </div>
+
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Paulo</div>
+            He's also a dog
+            </div>
+            </div>
+
+            </div>
+            </div>
+           
+
+            <div class="ui inverted segment rgt">
+            <div class="ui inverted relaxed divided list">
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Snickerdoodle</div>
+            An excellent companion
+            </div>
+            </div>
+
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Poodle</div>
+            A poodle, its pretty basic
+            </div>
+            </div>
+
+
+            <div class="item">
+            <div class="content">
+            <div class="header">Paulo</div>
+            He's also a dog
+            </div>
+            </div>
+
+            </div>
+            </div>
+           
             <div class="ui card floating message slide-in-blurred-top " style={{borderRadius:'20px' , backgroundColor:'#66ff99'}}>
             
             <div class="content">
