@@ -1,0 +1,236 @@
+{
+  "Medicine" : {
+    "amukkara" : {
+      "botanicalname" : "Withania somnifera",
+      "dosage" : "Powder 3-6 g",
+      "noofuses" : 7,
+      "parts" : "Root",
+      "plantname" : "amukkara",
+      "therapeuticuses" : "pain fever eczema anemia general debility rheumatic ailments oligozoozpermia"
+    },
+    "athi" : {
+      "botanicalname" : "Ficus racemosa",
+      "dosage" : "Decoction 30-50 ml twice daily,powder 3-6g",
+      "noofuses" : 4,
+      "parts" : "bark",
+      "plantname" : "athi",
+      "therapeuticuses" : "dysentery piles bleeding disorder leucorrhea"
+    },
+    "athimathuram" : {
+      "botanicalname" : "Glycyrrhiza glabra",
+      "dosage" : "powder 2-4g",
+      "noofuses" : 8,
+      "parts" : "stolon and root",
+      "plantname" : "athimathuram",
+      "therapeuticuses" : "burning micturition bone disorders cough jaundice eye diseases polydypsia peptic ulcer vitiligo"
+    },
+    "attruthummatti" : {
+      "botanicalname" : "Citrullus colocynthis",
+      "dosage" : "0.125-0.5 g and contraindicated in pregnancy",
+      "noofuses" : 3,
+      "parts" : "unripe Fruit",
+      "plantname" : "attruthummatti",
+      "therapeuticuses" : "dysmenorrhea amennorhea rheumatic ailments"
+    },
+    "avuri" : {
+      "botanicalname" : "Indigofera tinctoria",
+      "dosage" : "decoction 25-50 ml twice daily",
+      "noofuses" : 3,
+      "parts" : "whole plant",
+      "plantname" : "avuri",
+      "therapeuticuses" : "peptic ulcer poisoning leucorrhoea "
+    },
+    "cathikkai" : {
+      "botanicalname" : "Myristica fragrans",
+      "dosage" : "powder 500 mg -1g",
+      "noofuses" : 5,
+      "parts" : "kernel",
+      "plantname" : "cathikkai",
+      "therapeuticuses" : "asthma cough chronic dysentery oligozoozpermia reduced appetite"
+    },
+    "ceenthil" : {
+      "botanicalname" : "Tinospora cordifolia",
+      "dosage" : "powder 3-5g",
+      "noofuses" : 5,
+      "parts" : "stem",
+      "plantname" : "ceenthil",
+      "therapeuticuses" : "itchiness fever sinusitis skin diseases hypertension "
+    },
+    "ceeragam" : {
+      "botanicalname" : "Cuminum cyminum ",
+      "dosage" : "powder 1-5g",
+      "noofuses" : 6,
+      "parts" : "Fruit",
+      "plantname" : "ceeragam",
+      "therapeuticuses" : "dysentery pitha humour diseases liver diseases renal calculi jaundice peptic ulcer"
+    },
+    "chukku" : {
+      "botanicalname" : "Zingiber officinale",
+      "dosage" : "powder 500mg-1g",
+      "noofuses" : 6,
+      "parts" : "Dried rhizome",
+      "plantname" : "chukku",
+      "therapeuticuses" : "indigestion cough peptic ulcer headache loss of appetite oesophageal regurgitation"
+    },
+    "cirukurinjan" : {
+      "botanicalname" : "Gymnema sylvestre",
+      "dosage" : "powder 1-2g Decoction 30-50ml twice daily",
+      "noofuses" : 4,
+      "parts" : "root",
+      "plantname" : "cirukurinjan",
+      "therapeuticuses" : "asthma cough poisons diabetes mellitus"
+    },
+    "cirupilai" : {
+      "botanicalname" : "Aerva lanata",
+      "dosage" : "powder 5-10g Decoction 30-50ml twice daily",
+      "noofuses" : 6,
+      "parts" : "whole plant",
+      "plantname" : "cirupilai",
+      "therapeuticuses" : "diarrhoea haematemesis oliguria menorrhagia swelling inflamation"
+    },
+    "combu" : {
+      "botanicalname" : "Foeniculum vulgare",
+      "dosage" : "powder 1-3g",
+      "noofuses" : 5,
+      "parts" : " Fruit",
+      "plantname" : "combu",
+      "therapeuticuses" : "indigestion asthma liver diseases sinusitis epilepsy"
+    },
+    "elavangam" : {
+      "botanicalname" : "Syzygium aromaticum",
+      "dosage" : "powder 200-300g",
+      "noofuses" : 5,
+      "parts" : " flower bud",
+      "plantname" : "elavangam",
+      "therapeuticuses" : "dysentery loss of appetite tooth pain vomiting fainting"
+    },
+    "elavangapattai" : {
+      "botanicalname" : "Cinnamomum verum",
+      "dosage" : "Bark powder 65-260 mg leaf powder 1-3g",
+      "noofuses" : 5,
+      "parts" : " bark,leaf",
+      "plantname" : "elavangapattai",
+      "therapeuticuses" : "asthma poisoning dysentery flatulence vomiting"
+    },
+    "ingii" : {
+      "botanicalname" : "Zingiber officinale",
+      "dosage" : "2-3 ml of juice with honey",
+      "noofuses" : 4,
+      "parts" : "fresh rhizome",
+      "plantname" : "ingii",
+      "therapeuticuses" : "indigestion cough pitha diseases mukkatra diseases"
+    },
+    "kadukkai" : {
+      "botanicalname" : "Terminalia chebula",
+      "dosage" : "Powder 3-5g Decoction 30-50 ml",
+      "noofuses" : 5,
+      "parts" : "pericarp",
+      "plantname" : "kadukkai",
+      "therapeuticuses" : "jaundice eye diseases constipation ascites poisoning"
+    },
+    "kadukurokini" : {
+      "botanicalname" : "Picrorhiza kurroa",
+      "dosage" : "Powder 500mg-1g",
+      "noofuses" : 4,
+      "parts" : "Rhizome & Root",
+      "plantname" : "kadukurokini",
+      "therapeuticuses" : "fever liver diseases eczema impetigo"
+    },
+    "kakkanam" : {
+      "botanicalname" : "Clitoria ternatea",
+      "dosage" : "Powder 250-500mg",
+      "noofuses" : 4,
+      "parts" : "Root",
+      "plantname" : "kakkanam",
+      "therapeuticuses" : "fever eye diseases worm infestations leucorrhoea"
+    },
+    "kandankathiri" : {
+      "botanicalname" : "Solanum surrattense",
+      "dosage" : "Powder 2-4g Juice 5-10 ml Decoction 30-50ml twice daily",
+      "noofuses" : 6,
+      "parts" : "whole plant",
+      "plantname" : "kandankathiri",
+      "therapeuticuses" : "fever tuberculosis cough sinusitis losso of appetite asthma"
+    },
+    "karpokkarisi" : {
+      "botanicalname" : "Psoralea corylifolia",
+      "dosage" : "Powder 1-2g",
+      "noofuses" : 5,
+      "parts" : "Fruit",
+      "plantname" : "karpokkarisi",
+      "therapeuticuses" : "eczema itchiness poisoning leucoderma impetigo"
+    },
+    "karuncheeragam" : {
+      "botanicalname" : "Nigella sativa",
+      "dosage" : "Powder 500mg-4g",
+      "noofuses" : 6,
+      "parts" : "Seed",
+      "plantname" : "karuncheeragam",
+      "therapeuticuses" : "scabies jaundice peptic ulcer impetigo eczema flatulence"
+    },
+    "kasakasa" : {
+      "botanicalname" : "Papaver somniferum",
+      "dosage" : "Powder 3-5g 10 ml kasa kasa milk",
+      "noofuses" : 5,
+      "parts" : "Seed",
+      "plantname" : "kasakasa",
+      "therapeuticuses" : "male impotency insomnia dysentery itchiness"
+    },
+    "keezhkainelli" : {
+      "botanicalname" : "Phyllanthus amarus",
+      "dosage" : "Powder 2g Decoction 30- 50 ml twice daily Medicinal paste 3 - 5 g of fresh whole plant ",
+      "noofuses" : 6,
+      "parts" : "whole plant",
+      "plantname" : "keezhkainelli",
+      "therapeuticuses" : "pitha diseases jaundice eye diseases dysentery diabetes lack of appetite"
+    },
+    "kollu" : {
+      "botanicalname" : "Vigna unguiculata",
+      "dosage" : " Decoction 30- 50 ml twice daily 30- 40 g coarse powder in 200 ml of water for preparing decoction",
+      "noofuses" : 7,
+      "parts" : "Seed",
+      "plantname" : "kollu",
+      "therapeuticuses" : "kabam diseases dysentery obesity fever with shivering peptic ulcer swelling dissolve renal calculi"
+    },
+    "kothumalli" : {
+      "botanicalname" : "Coriandrum sativum",
+      "dosage" : "Powder 1 - 3g Decoction 20 - 30 ml twice daily",
+      "noofuses" : 7,
+      "parts" : "Fruit",
+      "plantname" : "kothumalli",
+      "therapeuticuses" : "alcohol addiction body heat hiccup vomiting impetigo dry mouth fever with rigour"
+    },
+    "nerunjil" : {
+      "botanicalname" : "Tribulus terrestris",
+      "dosage" : "Powder 3 - 6 g or Decoction 30- 50 ml twice daily",
+      "noofuses" : 2,
+      "parts" : "Fruit",
+      "plantname" : "nerunjil",
+      "therapeuticuses" : "\"renal calculi  burning micturition"
+    },
+    "vembu" : {
+      "botanicalname" : "Azadirachta indica A",
+      "dosage" : "Powder 1-2 g",
+      "noofuses" : 4,
+      "parts" : "Seed and flower",
+      "plantname" : "vembu",
+      "therapeuticuses" : "heat Loss of taste excessive thirst chronic vatha diseases "
+    },
+    "venthayam" : {
+      "botanicalname" : "Trigonella foenum-graceum L",
+      "dosage" : "Powder 3-6 g",
+      "noofuses" : 2,
+      "parts" : "Seed",
+      "plantname" : "venthayam",
+      "therapeuticuses" : "tuberculosis dysentery hypertension diabetes mellitus excessive thirst leucorrhea\""
+    },
+    "vilvam" : {
+      "botanicalname" : "Aegle marmelo",
+      "dosage" : "Decoction 30-50 ml twice daily",
+      "noofuses" : 3,
+      "parts" : "Root",
+      "plantname" : "vilvam",
+      "therapeuticuses" : "fainting fever body pain"
+    }
+  }
+}
