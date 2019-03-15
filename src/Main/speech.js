@@ -63,67 +63,24 @@ class Speech extends React.Component{
     onConditionalRenderPlant = () =>{
 
       let disease = this.state.text;
-      let flag = 0;
+      
 
-      let textlen  = disease.trim().split(/\s+/).length;
-      if(textlen <=2){
-        return(
-          <div>
-        <h3 class="tracking-in-expand ui icon header">Sorry I cant find any results .</h3><br />
-        <h2 class="tracking-in-expand ui icon header">Please say again !</h2>
-        </div>
-        );
-      }else{
+      
 
       let textinput = disease.split(" ");
-      let chumma = textinput[textinput.length-1]; 
-      let chumma2 = textinput[textinput.length-2]; 
-      let avail,avail2;
+      console.log(textinput);
 
-      
-      console.log(disease);
-
-
-          return(<div > {this.state.medicine.map( (medicine)=>{
-
-            avail = medicine.therapeuticuses.search(chumma);
-            
-
-            avail2 = medicine.therapeuticuses.search(chumma2);
-            
-
-            
-
-
-           if((avail !== -1  || avail2 !== -1) && (chumma.length >4 || chumma2.length >4) ){
-             flag = 1 ;
-             
-          
-          return(
-            <div>
-              <br />
-            <h2 class="tracking-in-expand ui icon header">You can use  : {medicine.plantname}</h2><br />
-            <h4 class="tracking-in-expand ui icon header" >Parts for medicine preparation :{medicine.parts}</h4> <br />
-            <h4 class="tracking-in-expand ui icon header">Dosage : {medicine.dosage}</h4> <br />
-            <h4 class="tracking-in-expand ui icon header">Botanical name : {medicine.botanicalname}</h4> <br />
+      return(<div class="typewriter" style={{padding:'20px' ,borderWidth:'thick'}}>
             <br />
-         </div>
-           
-          );
-          
-        }
-        }
-        
-          
-          
-          )
-        
-        }</div>);
-      
-      
 
-
-    }
+            <div class="gradient-border" id="box">
+            <h1 className="ui icon header" >General Notices.</h1>
+            <br />
+            <p style={{padding:'10px'}}>
+            Consultation of a siddha physician is mandatory, for the right choice of drug, depending upon the body constitution of the patient and severity of the illness.
+</p><br /><p><h4><i>     English terminologies given for disease/symptom are fairly accurate and for exact description about the disease, siddha texts should be referred.       </i></h4></p><br />
+            </div>
+            </div>);
   
   }
 

@@ -5,6 +5,8 @@ body,html{
     
 }
 
+body::-webkit-scrollbar { width: 0  }  
+
 ul{
   border-radius: 20px;
   padding:20px;
