@@ -150,6 +150,7 @@ class Speech extends React.Component{
             }
             if(found === 1)
             {
+              found = 2;
               
             botname = <Medicine parts={medicine.parts} name = {medicine.plantname} dose={medicine.dosage}  />;
             }
@@ -173,7 +174,7 @@ class Speech extends React.Component{
               
               
             }
-            if(found === 1)
+            if(found === 1 && found !== 2)
             botname = <Medicine name = {medicine.plantname} dose={medicine.dosage} parts={medicine.parts} />;
 
 
