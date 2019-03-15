@@ -45,7 +45,17 @@ class About extends React.Component{
             </div>
             </div>
 
-            
+            <div class="typewriter">
+            <br />
+
+            <div class="gradient-border" id="box">
+            <h1 className="ui icon header" style={{padding:'10px'}}>General Notices.</h1>
+            <br />
+            <p style={{padding:'10px'}}>
+            Consultation of a siddha physician is mandatory, for the right choice of drug, depending upon the body constitution of the patient and severity of the illness.
+</p><br /><p><h4><i>     English terminologies given for disease/symptom are fairly accurate and for exact description about the disease, siddha texts should be referred.       </i></h4></p><br />
+            </div>
+            </div>
             </div>
 
 
