@@ -2,6 +2,10 @@ import React from 'react';
 import SpeechRecognizer from 'simple-speech-recognition';
 import firebase from './Firebase/firebase';
 import './speech.css';
+import Botanical from './subdiv/botanicalname';
+import Dosage from './subdiv/dosage';
+import Uses from './subdiv/uses';
+import Medicine from './subdiv/medicine';
 
 
 
@@ -10,7 +14,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'Tap to speak !' , medicine:[] ,search : 0};
+      this.state = {text : 'medicine  for leucorrhea' , medicine:[] ,search : 0};
 
 
     }
@@ -68,19 +72,124 @@ class Speech extends React.Component{
       
 
       let textinput = disease.split(" ");
-      console.log(textinput);
+      
+    
+      var botname;
+      if(textinput[0].localeCompare("botanical") === 0)
+      {
+        console.log("Found botanical");
+        
+        
+        this.state.medicine.map( (medicine)=>{
+          
+          var condition = medicine.plantname.localeCompare(textinput[textinput.length-1]) ;
+          if(condition === 0)
+          {
+            botname = <Botanical name = {medicine.botanicalname} original={medicine.plantname} />;
+            
+          }
+          
+          
+        });
+      }
 
-      return(<div class="typewriter" style={{padding:'20px' ,borderWidth:'thick'}}>
-            <br />
 
-            <div class="gradient-border" id="box">
-            <h1 className="ui icon header" >General Notices.</h1>
-            <br />
-            <p style={{padding:'10px'}}>
-            Consultation of a siddha physician is mandatory, for the right choice of drug, depending upon the body constitution of the patient and severity of the illness.
-</p><br /><p><h4><i>     English terminologies given for disease/symptom are fairly accurate and for exact description about the disease, siddha texts should be referred.       </i></h4></p><br />
-            </div>
-            </div>);
+      if(textinput[0].localeCompare("dosage") === 0)
+      {
+        console.log("Found dosage");
+        
+        
+        this.state.medicine.map( (medicine)=>{
+          
+          var condition = medicine.plantname.localeCompare(textinput[textinput.length-1]) ;
+          if(condition === 0)
+          {
+            botname = <Dosage name = {medicine.dosage} original={medicine.plantname} part={medicine.parts}  />;
+            
+          }
+          
+          
+        });
+      }
+
+
+      if(textinput[0].localeCompare("uses") === 0)
+      {
+        console.log("Found uses");
+        
+        
+        this.state.medicine.map( (medicine)=>{
+          
+          var condition = medicine.plantname.localeCompare(textinput[textinput.length-1]) ;
+          if(condition === 0)
+          {
+            botname = <Uses name = {medicine.dosage} arr={medicine.therapeuticuses} original={medicine.plantname} />;
+            
+          }
+          
+          
+        });
+      }
+
+
+      if(textinput[0].localeCompare("medicine") === 0)
+      {
+        console.log("Found medicine");
+        var found = 0 ;
+        
+        
+        this.state.medicine.map( (medicine)=>{
+          medicine.therapeuticuses.map((data)=>{
+
+            var condition = data.localeCompare(textinput[textinput.length-1]) ;
+            if(condition === 0 && found === 0)
+            {
+              found = 1;
+              
+              
+            }
+            if(found === 1)
+            {
+              
+            botname = <Medicine parts={medicine.parts} name = {medicine.plantname} dose={medicine.dosage}  />;
+            }
+
+          });
+
+
+         
+          
+          
+        });
+
+
+        this.state.medicine.map( (medicine)=>{
+          medicine.therapeuticuses.map((data)=>{
+            var diseasename = textinput[(textinput.length-1)].concat(" ").concat(textinput[textinput.length-2]);
+            var condition = data.localeCompare(diseasename);
+            if(condition === 0 && found === 0)
+            {
+              found = 1;
+              
+              
+            }
+            if(found === 1)
+            botname = <Medicine name = {medicine.plantname} dose={medicine.dosage} parts={medicine.parts} />;
+
+
+          });
+
+          
+         
+          
+          
+        });
+      }
+      
+      return <div>{botname}</div>;
+      
+
+      
   
   }
 
