@@ -7,7 +7,35 @@ const plantname =(props)=>{
         use = use + props.arr[i] +" * ";
     }
 
-    return(<div>Here you go !<br />Details of {props.original}. <br/> Botanical name : {props.botanical} <br /> Dosage : {props.dose} <br/> Parts used to prepare Medicine : {props.part} <br /> Medicinal uses : {use} </div>);
+    return(<div style={{padding:'10px'}}>
+    
+
+
+        <div class="gradient-border" id="box">
+            <br/>
+            <h1 className="ui icon header" > Here you go ! <br /> Details of {props.original}:</h1>
+            <br />
+            <p >
+            
+            <br/> Botanical name : {props.botanical} 
+            <br /> Dosage : {props.dose} 
+            <br/> Parts used to prepare Medicine : {props.part} 
+            <br /> Medicinal uses : {use} 
+
+            </p>
+            <br />
+            
+            </div>
+
+
+
+        </div>
+        
+        
+        
+        
+        
+        );
 }
 
 export default plantname;

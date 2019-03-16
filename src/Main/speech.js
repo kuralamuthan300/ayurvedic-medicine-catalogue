@@ -16,7 +16,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'Tap to speak !' , medicine:[] ,search :0};
+      this.state = {text : 'medicine for bleeding disorder' , medicine:[] ,search :0};
 
 
     }
@@ -83,10 +83,11 @@ class Speech extends React.Component{
       this.state.medicine.map( (medicine)=>{
           
         
-        if(medicine.plantname === textinput[textinput.length-1])
+        if(medicine.plantname === textinput[0])
         {
           botname = <OnewordPlant original = {medicine.plantname} botanical={medicine.botanicalname} dose ={medicine.dosage} part={medicine.parts} arr={medicine.therapeuticuses} />;
           found=1;
+          
         }
         
         
@@ -96,18 +97,18 @@ class Speech extends React.Component{
 
       this.state.medicine.map( (medicine)=>{
         medicine.therapeuticuses.map((data)=>{
-          var diseasename = textinput[(textinput.length-2)] + " " + textinput[textinput.length-1];
+          var diseasename = textinput[0] + " " + textinput[1];
           console.log(diseasename);
           var condition = data.localeCompare(diseasename);
           if(condition === 0 && found === 0)
           {
-            found = 1;
+            found = 10;
             
             
           }
-          if(found === 1)
+          if(found === 10)
           {
-          found = 2;
+          found = 20;
           botname = <OnewordMedicine dose={medicine.dosage} disease = {diseasename} original={medicine.plantname} parts={medicine.parts} botanical={medicine.botanicalname} arr = {medicine.therapeuticuses}/>;
           }
 
@@ -127,13 +128,13 @@ class Speech extends React.Component{
           var condition = data.localeCompare(textinput[textinput.length-1]) ;
           if(condition === 0 && found === 0 )
           {
-            found = 1;
+            found = 100;
             
             
           }
-          if(found === 1)
+          if(found === 100)
           {
-            found = 2;
+            found = 200;
             
           botname = <OnewordMedicine dose={medicine.dosage} disease = {data} original={medicine.plantname} parts={medicine.parts} botanical={medicine.botanicalname} arr = {medicine.therapeuticuses}/>;
           }
@@ -160,11 +161,23 @@ class Speech extends React.Component{
           if(condition === 0)
           {
             botname = <Botanical name = {medicine.botanicalname} original={medicine.plantname} />;
-            found=1;
+            found=1000;
+          
           }
           
           
         });
+
+        if(found !== 1000)
+        {
+          botname = <div style={{padding :'20px'}}><div class="gradient-border"  id="box">
+          <br/>
+          <h1 className="ui icon header" > Botanical name of {textinput[textinput.length-1]} is not found !</h1>
+          <br />
+          <br />
+          
+          </div></div>;
+        }
       }
 
 
@@ -179,11 +192,22 @@ class Speech extends React.Component{
           if(condition === 0)
           {
             botname = <Dosage name = {medicine.dosage} original={medicine.plantname} part={medicine.parts}  />;
-            found=1;
+            found=10000;
           }
           
           
         });
+
+        if(found !== 10000)
+        {
+          botname = <div style={{padding :'20px'}}><div class="gradient-border"  id="box">
+          <br/>
+          <h1 className="ui icon header" > {textinput[textinput.length-1]} is not found !</h1>
+          <br />
+          <br />
+          
+          </div></div>;
+        }
       }
 
 
@@ -197,13 +221,24 @@ class Speech extends React.Component{
           var condition = medicine.plantname.localeCompare(textinput[textinput.length-1]) ;
           if(condition === 0)
           {
-            found = 1;
+            found = 100000;
             botname = <Uses name = {medicine.dosage} arr={medicine.therapeuticuses} original={medicine.plantname} />;
             
           }
           
           
         });
+
+        if(found !== 100000)
+        {
+          botname = <div style={{padding :'20px'}}><div class="gradient-border"  id="box">
+          <br/>
+          <h1 className="ui icon header" > {textinput[textinput.length-1]} is not found !</h1>
+          <br />
+          <br />
+          
+          </div></div>;
+        }
       }
 
 
@@ -219,22 +254,20 @@ class Speech extends React.Component{
             var condition = data.localeCompare(diseasename);
             if(condition === 0 && found === 0)
             {
-              found = 1;
+              found = 1000000;
               
               
             }
-            if(found === 1)
-            {found = 2;
+            if(found === 1000000)
+            {found = 2000000;
             botname = <Medicine name = {medicine.plantname} dose={medicine.dosage} parts={medicine.parts} />;
             }
 
           });
-
-          
-         
-          
           
         });
+
+        
         
         this.state.medicine.map( (medicine)=>{
           medicine.therapeuticuses.map((data)=>{
@@ -242,13 +275,13 @@ class Speech extends React.Component{
             var condition = data.localeCompare(textinput[textinput.length-1]) ;
             if(condition === 0 && found === 0 )
             {
-              found = 1;
+              found = 10000000;
               
               
             }
-            if(found === 1)
+            if(found === 10000000)
             {
-              found = 2;
+              found = 20000000;
               
             botname = <Medicine parts={medicine.parts} name = {medicine.plantname} dose={medicine.dosage}  />;
             }
@@ -261,6 +294,18 @@ class Speech extends React.Component{
           
         });
 
+        if(found <1000000)
+        {
+
+          botname = <div style={{padding :'20px'}}><div class="gradient-border"  id="box">
+          <br/>
+          <h1 className="ui icon header" > Medicine not found !,<br /> Try again!</h1>
+          <br />
+          <br />
+          
+          </div></div>;
+        }
+
 
         
       }
@@ -272,7 +317,7 @@ class Speech extends React.Component{
         return <div>Happy to help !</div>;
       }
       
-        if(found >=1)
+        if(found >=0)
         {
           return <div>{botname}</div>;
         }else return <div > I did't get that say it again </div>;
