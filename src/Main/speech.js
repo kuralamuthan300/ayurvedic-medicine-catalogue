@@ -14,7 +14,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'medicine  for leucorrhea' , medicine:[] ,search : 0};
+      this.state = {text : 'medicine  for general debility' , medicine:[] ,search : 0};
 
 
     }
@@ -137,12 +137,35 @@ class Speech extends React.Component{
         console.log("Found medicine");
         var found = 0 ;
         
+        this.state.medicine.map( (medicine)=>{
+          medicine.therapeuticuses.map((data)=>{
+            var diseasename = textinput[(textinput.length-2)] + " " + textinput[textinput.length-1];
+            console.log(diseasename);
+            var condition = data.localeCompare(diseasename);
+            if(condition === 0 && found === 0)
+            {
+              found = 1;
+              
+              
+            }
+            if(found === 1)
+            {found = 2;
+            botname = <Medicine name = {medicine.plantname} dose={medicine.dosage} parts={medicine.parts} />;
+            }
+
+          });
+
+          
+         
+          
+          
+        });
         
         this.state.medicine.map( (medicine)=>{
           medicine.therapeuticuses.map((data)=>{
 
             var condition = data.localeCompare(textinput[textinput.length-1]) ;
-            if(condition === 0 && found === 0)
+            if(condition === 0 && found === 0 )
             {
               found = 1;
               
@@ -164,27 +187,7 @@ class Speech extends React.Component{
         });
 
 
-        this.state.medicine.map( (medicine)=>{
-          medicine.therapeuticuses.map((data)=>{
-            var diseasename = textinput[(textinput.length-1)].concat(" ").concat(textinput[textinput.length-2]);
-            var condition = data.localeCompare(diseasename);
-            if(condition === 0 && found === 0)
-            {
-              found = 1;
-              
-              
-            }
-            if(found === 1 && found !== 2)
-            botname = <Medicine name = {medicine.plantname} dose={medicine.dosage} parts={medicine.parts} />;
-
-
-          });
-
-          
-         
-          
-          
-        });
+        
       }
       
       return <div>{botname}</div>;
