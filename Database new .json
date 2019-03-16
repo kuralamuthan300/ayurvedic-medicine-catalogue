@@ -1,0 +1,36 @@
+{
+  "Medicine" : {
+    "amukkara" : {
+      "botanicalname" : "Withania somnifera",
+      "dosage" : "Powder 3-6 g",
+      "noofuses" : 7,
+      "parts" : "Root",
+      "plantname" : "amukkara",
+      "therapeuticuses" : [ "pain", "fever", "eczema", "anemia", "general debility", "rheumatic ailments", "oligozoospermia" ]
+    },
+    "athi" : {
+      "botanicalname" : "Ficus racemosa",
+      "dosage" : "Decoction 30-50 ml twice daily,powder 3-6g",
+      "noofuses" : 4,
+      "parts" : "bark",
+      "plantname" : "athi",
+      "therapeuticuses" : [ "dysentery", "piles", "bleeding disorder", "leucorrhea" ]
+    },
+    "athimathuram" : {
+      "botanicalname" : "Glycyrrhiza glabra",
+      "dosage" : "powder 2-4g",
+      "noofuses" : 8,
+      "parts" : "stolon and root",
+      "plantname" : "athimathuram",
+      "therapeuticuses" : [ "burning micturition", "bone disorders", "cough", "jaundice", "eye diseases", "polydypsia", "peptic ulcer", "vitiligo" ]
+    },
+    "vilvam" : {
+      "botanicalname" : "Aegle marmelo",
+      "dosage" : "Decoction 30-50 ml twice daily",
+      "noofuses" : 3,
+      "parts" : "Root",
+      "plantname" : "vilvam",
+      "therapeuticuses" : [ "fainting", "fever", "body pain" ]
+    }
+  }
+}
