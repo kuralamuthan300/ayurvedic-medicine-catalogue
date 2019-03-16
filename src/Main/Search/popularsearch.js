@@ -1,42 +1,27 @@
 import React from 'react';
+import './search.css';
 
 
-const Popularsearch=()=>{
-
+const Popularsearch=(props)=>{
+    var use="  ";
+    for(var i = 0 ; i<props.arr.length ;i++)
+    {
+       
+        if(i !==  props.arr.length-1)
+        {
+            use = use + props.arr[i].charAt(0).toUpperCase() + props.arr[i].slice(1) +" , ";
+        }else  use = use + props.arr[i].charAt(0).toUpperCase() + props.arr[i].slice(1);
+    }
+//string.charAt(0).toUpperCase() + string.slice(1)
     return(
-
-<div>
-<div class="ui section divider"></div>
-
-<center><i class="search icon"></i>
-<br />
-<h4>Popular categories</h4> </center>
-
-
-<div class="ui inverted segment">
-<div class="ui inverted relaxed divided list">
-<div class="item">
-<div class="content">
-<div class="header">Heart related</div>
-</div>
-</div>
-<div class="item">
-<div class="content">
-<div class="header">Stomach related</div>
-</div>
-</div>
-
-<div class="item">
-<div class="content">
-<div class="header">Eye related</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-
+        <div class=" zoom puff-in-left " style={{borderWidth:'3px',borderColor:'#000000'}} id="box">
+        <h1 className="ui icon header" >{props.plantname.charAt(0).toUpperCase() + props.plantname.slice(1)}</h1>
+        <br />
+        <h3 className="ui  header">Botanical name :</h3> <p>{props.botanicalname}</p>
+        <h3 className="ui  header">Dosage:</h3> <p>{props.dosage}</p>
+        <h3 className="ui  header">Edible part:</h3> <p>{props.part}</p>
+        <h3 className="ui  header">Therapeutic uses name :</h3> <p>{use}</p><br />
+        </div>
     );
 }
 export default Popularsearch;
