@@ -6,6 +6,7 @@ import Botanical from './subdiv/botanicalname';
 import Dosage from './subdiv/dosage';
 import Uses from './subdiv/uses';
 import Medicine from './subdiv/medicine';
+import OnewordPlant from './subdiv/oneword/plantname';
 
 
 
@@ -14,7 +15,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'medicine  for general debility' , medicine:[] ,search : 0};
+      this.state = {text : 'vilvam' , medicine:[] ,search :0};
 
 
     }
@@ -75,7 +76,24 @@ class Speech extends React.Component{
       
     
       var botname;
-      if(textinput[0].localeCompare("botanical") === 0)
+      var found = 0 ;
+
+
+      this.state.medicine.map( (medicine)=>{
+          
+        
+        if(medicine.plantname === textinput[textinput.length-1])
+        {
+          botname = <OnewordPlant original = {medicine.plantname} botanical={medicine.botanicalname} dose ={medicine.dosage} part={medicine.parts} arr={medicine.therapeuticuses} />;
+          found=1;
+        }
+        
+        
+      });
+
+
+
+      if(textinput[0].localeCompare("botanical") === 0 && found === 0)
       {
         console.log("Found botanical");
         
@@ -86,7 +104,7 @@ class Speech extends React.Component{
           if(condition === 0)
           {
             botname = <Botanical name = {medicine.botanicalname} original={medicine.plantname} />;
-            
+            found=1;
           }
           
           
@@ -94,7 +112,7 @@ class Speech extends React.Component{
       }
 
 
-      if(textinput[0].localeCompare("dosage") === 0)
+      if(textinput[0].localeCompare("dosage") === 0 && found === 0) 
       {
         console.log("Found dosage");
         
@@ -105,7 +123,7 @@ class Speech extends React.Component{
           if(condition === 0)
           {
             botname = <Dosage name = {medicine.dosage} original={medicine.plantname} part={medicine.parts}  />;
-            
+            found=1;
           }
           
           
@@ -113,7 +131,7 @@ class Speech extends React.Component{
       }
 
 
-      if(textinput[0].localeCompare("uses") === 0)
+      if(textinput[0].localeCompare("uses") === 0 && found === 0)
       {
         console.log("Found uses");
         
@@ -123,6 +141,7 @@ class Speech extends React.Component{
           var condition = medicine.plantname.localeCompare(textinput[textinput.length-1]) ;
           if(condition === 0)
           {
+            found = 1;
             botname = <Uses name = {medicine.dosage} arr={medicine.therapeuticuses} original={medicine.plantname} />;
             
           }
@@ -132,10 +151,10 @@ class Speech extends React.Component{
       }
 
 
-      if(textinput[0].localeCompare("medicine") === 0)
+      if(textinput[0].localeCompare("medicine") === 0 && found === 0)
       {
         console.log("Found medicine");
-        var found = 0 ;
+        
         
         this.state.medicine.map( (medicine)=>{
           medicine.therapeuticuses.map((data)=>{
@@ -189,8 +208,20 @@ class Speech extends React.Component{
 
         
       }
+
+
+
+      if(this.state.text === "Tap to speak")
+      {
+        return <div>Happy to help !</div>;
+      }
       
-      return <div>{botname}</div>;
+        if(found >=1)
+        {
+          return <div>{botname}</div>;
+        }else return <div > I did't get that say it again </div>;
+      
+      
       
 
       
