@@ -7,6 +7,7 @@ import Dosage from './subdiv/dosage';
 import Uses from './subdiv/uses';
 import Medicine from './subdiv/medicine';
 import OnewordPlant from './subdiv/oneword/plantname';
+import OnewordMedicine from './subdiv/oneword/medicineoneword';
 
 
 
@@ -15,7 +16,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'vilvam' , medicine:[] ,search :0};
+      this.state = {text : 'Tap to speak !' , medicine:[] ,search :0};
 
 
     }
@@ -90,6 +91,61 @@ class Speech extends React.Component{
         
         
       });
+
+
+
+      this.state.medicine.map( (medicine)=>{
+        medicine.therapeuticuses.map((data)=>{
+          var diseasename = textinput[(textinput.length-2)] + " " + textinput[textinput.length-1];
+          console.log(diseasename);
+          var condition = data.localeCompare(diseasename);
+          if(condition === 0 && found === 0)
+          {
+            found = 1;
+            
+            
+          }
+          if(found === 1)
+          {
+          found = 2;
+          botname = <OnewordMedicine dose={medicine.dosage} disease = {diseasename} original={medicine.plantname} parts={medicine.parts} botanical={medicine.botanicalname} arr = {medicine.therapeuticuses}/>;
+          }
+
+        });
+
+        
+       
+        
+        
+      });
+
+
+
+      this.state.medicine.map( (medicine)=>{
+        medicine.therapeuticuses.map((data)=>{
+
+          var condition = data.localeCompare(textinput[textinput.length-1]) ;
+          if(condition === 0 && found === 0 )
+          {
+            found = 1;
+            
+            
+          }
+          if(found === 1)
+          {
+            found = 2;
+            
+          botname = <OnewordMedicine dose={medicine.dosage} disease = {data} original={medicine.plantname} parts={medicine.parts} botanical={medicine.botanicalname} arr = {medicine.therapeuticuses}/>;
+          }
+
+        });
+
+
+       
+        
+        
+      });
+
 
 
 
@@ -211,7 +267,7 @@ class Speech extends React.Component{
 
 
 
-      if(this.state.text === "Tap to speak")
+      if(this.state.text === "Tap to speak !")
       {
         return <div>Happy to help !</div>;
       }
