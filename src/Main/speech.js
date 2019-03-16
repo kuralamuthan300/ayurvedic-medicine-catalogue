@@ -16,7 +16,7 @@ class Speech extends React.Component{
 
     constructor(props){
       super(props);
-      this.state = {text : 'medicine for bleeding disorder' , medicine:[] ,search :0};
+      this.state = {text : 'Tap to speak !' , medicine:[] ,search :0};
 
 
     }
@@ -314,7 +314,13 @@ class Speech extends React.Component{
 
       if(this.state.text === "Tap to speak !")
       {
-        return <div>Happy to help !</div>;
+        return <div style={{padding :'20px'}}><div class="gradient-border"  id="box">
+        <br/>
+        <h1 className="ui icon header" > Happy to help !</h1>
+        <br />
+        <br />
+        
+        </div></div>;
       }
       
         if(found >=0)
